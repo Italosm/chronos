@@ -3,12 +3,13 @@ import "./styles/global.css";
 
 import { Heading } from "./components/Heading";
 import { Container } from "./components/Container";
+import ChronosLogo from "./components/Logo";
 
 export function App() {
   return (
     <>
       <Container>
-        <Heading>LOGO</Heading>
+        <ChronosLogo />
       </Container>
 
       <Container>

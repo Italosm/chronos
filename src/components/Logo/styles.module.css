@@ -1,0 +1,40 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.letterContainer {
+  position: relative;
+  font-weight: bold;
+  font-size: 3.75rem; /* text-6xl */
+  display: flex;
+  align-items: center;
+}
+
+.letterC {
+  position: relative;
+  z-index: 10;
+  color: var(--primary-light);
+}
+
+.letterH {
+  position: relative;
+  margin-left: -1.35rem; /* sobreposição da letra H sobre a letra C*/
+  z-index: 20;
+  color: var(--primary);
+}
+
+.brandName {
+  font-size: 1.25rem; /* text-xl */
+  margin-left: 0.5rem; /* ml-2 */
+  font-weight: 500; /* font-medium */
+  color: var(--text-default);
+}
