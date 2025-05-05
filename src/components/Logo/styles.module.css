@@ -2,16 +2,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 3.2rem;
   width: 100%;
   height: 100%;
 }
 
-.logoWrapper {
+.logoLink {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.1s ease-in-out;
+}
+
+.logoLink:hover {
+  filter: brightness(80%);
+}
+
+.logoLink svg {
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 .letterContainer {
+  display: flex;
   position: relative;
   font-weight: bold;
   font-size: 3.75rem; /* text-6xl */
@@ -27,14 +44,13 @@
 
 .letterH {
   position: relative;
-  margin-left: -1.35rem; /* sobreposição da letra H sobre a letra C*/
+  margin-left: -1.25rem; /* sobreposição da letra H sobre a letra C*/
   z-index: 20;
   color: var(--primary);
 }
 
 .brandName {
-  font-size: 1.25rem; /* text-xl */
-  margin-left: 0.5rem; /* ml-2 */
-  font-weight: 500; /* font-medium */
+  font-size: 3.75rem;
+  font-weight: bold;
   color: var(--text-default);
 }

@@ -1,0 +1,68 @@
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.menuLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--text-over-primary);
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.menuLink:hover {
+  filter: brightness(50%);
+}
+
+.menuLink svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--text-over-primary);
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  transition: all 0.1s ease-in-out;
+  border: none;
+}
+
+.menuButton:hover {
+  filter: brightness(50%);
+}
+
+.menuLabel {
+  margin-top: 4px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+
+  width: 6rem; /* largura fixa para padronizar */
+  text-align: center; /* centraliza o texto */
+}
+
+.menuItem:hover .menuLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
