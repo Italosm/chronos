@@ -33,6 +33,10 @@
 }
 
 .button:disabled {
-  border-bottom: 0.2rem solid var(--disabled);
   color: var(--text-muted);
+}
+
+.button:disabled:hover {
+  filter: none;
+  cursor: not-allowed;
 }

@@ -17,7 +17,10 @@ export function Menu() {
     return storageTheme;
   });
   function handleThemeChange() {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((prevTheme) => {
+      const nextTheme = prevTheme === "dark" ? "light" : "dark";
+      return nextTheme;
+    });
   }
   const nextThemeIcon = {
     dark: <SunIcon />,
