@@ -39,14 +39,14 @@
 .letterC {
   position: relative;
   z-index: 10;
-  color: var(--primary-light);
+  color: var(--primary);
 }
 
 .letterH {
   position: relative;
   margin-left: -1.25rem; /* sobreposição da letra H sobre a letra C*/
   z-index: 20;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 .brandName {
