@@ -11,7 +11,7 @@ export function Tips() {
     workTime: <span>Foque por {state.config.workTime}min</span>,
     shortBreakTime: <span>Descanse por {state.config.shortBreakTime}min</span>,
     longBreakTime: (
-      <span>Descanso longo ({state.config.longBreakTime}min)</span>
+      <span>Descanso longo de {state.config.longBreakTime}min</span>
     ),
   };
 
