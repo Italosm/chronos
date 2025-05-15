@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.buttonContainer button {
+  min-width: auto;
+  margin: 0;
+  padding: 1rem;
+}
+
+.buttonContainer button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.responsiveTable {
+  overflow-x: auto;
+  border-radius: 0.8rem;
+}
+
+.responsiveTable table {
+  width: 100%;
+  min-width: 64rem;
+  font-size: 1.6rem;
+  border-collapse: collapse;
+}
+
+.responsiveTable th {
+  background-color: var(--gray-600);
+}
+
+.responsiveTable td {
+  background-color: var(--gray-800);
+}
+
+.responsiveTable th,
+.responsiveTable td {
+  border-bottom: 0.2rem solid var(--gray-700);
+  text-align: left;
+  padding: 1.6rem;
+}
+
+.buttonLabel {
+  margin-top: 4px;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+
+  width: 6rem; /* largura fixa para padronizar */
+  text-align: center; /* centraliza o texto */
+}
+
+.buttonContainer:hover .buttonLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
