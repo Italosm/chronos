@@ -59,3 +59,18 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.emptyMessage {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-top: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
