@@ -84,20 +84,6 @@ exibir informações amigáveis.
 
 ---
 
-## 📁 Estrutura de Pastas
-
-```
-src/
-  ├── components/        # Componentes reutilizáveis
-  ├── contexts/
-  │    └── TaskContext/ # Implementação do contexto e reducer
-  ├── models/           # Modelos e tipagens
-  ├── utils/            # Funções utilitárias (ex: formatadores)
-  └── assets/           # Áudios, imagens e ícones
-```
-
----
-
 ## 🛠️ Funcionalidades
 
 - [x] Iniciar, pausar e resetar ciclos Pomodoro.
