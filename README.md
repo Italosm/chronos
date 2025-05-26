@@ -1,54 +1,168 @@
-# React + TypeScript + Vite
+# Chronos 🕒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Chronos** é um aplicativo Pomodoro desenvolvido com React, que foca na prática
+e estudo de conceitos como gerenciamento de estado global utilizando **Context
+API** e **Reducers**. Além disso, o projeto explora diversos recursos
+importantes para aplicações modernas como:
 
-Currently, two official plugins are available:
+- Workers
+- Persistência no **localStorage**
+- Reprodução de áudio
+- Manipulação e formatação de datas
+- Temporização precisa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📦 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** 19
+- **React Router** 7
+- **Lucide React** (ícones)
+- **React Toastify** (notificações)
+- **Date-fns** (manipulação de datas)
+- **TypeScript** 5
+- **Vite** (build e desenvolvimento)
+- **ESLint** (padronização de código)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Scripts Disponíveis
+
+| Script    | Descrição                                      |
+| --------- | ---------------------------------------------- |
+| `dev`     | Executa o servidor de desenvolvimento (`vite`) |
+| `build`   | Compila o TypeScript e gera a build (`vite`)   |
+| `lint`    | Executa o linter (`eslint`)                    |
+| `preview` | Executa o preview da aplicação em produção     |
+
+---
+
+## 🧑‍💻 Estrutura e Foco do Projeto
+
+O foco principal do projeto é o **gerenciamento de estado global** utilizando a
+combinação de **Context API + Reducer**, seguindo boas práticas e um design
+inspirado em arquiteturas de estado previsíveis, como Redux.
+
+Exemplo de Reducer utilizado:
+
+```typescript
+export function taskReducer(
+  state: TaskStateModel,
+  action: TaskActionModel,
+): TaskStateModel {
+  switch (action.type) {
+    case TaskActionTypes.START_TASK:
+    // Lógica de início de tarefa, ciclo, temporização
+    case TaskActionTypes.INTERRUPT_TASK:
+    // Interrupção da tarefa atual
+    case TaskActionTypes.RESET_STATE:
+    // Reset do estado para o inicial
+    case TaskActionTypes.COUNT_DOWN:
+    // Contagem regressiva com formatação de tempo
+    case TaskActionTypes.CHANGE_SETTINGS:
+    // Alteração nas configurações do Pomodoro
+    case TaskActionTypes.COMPLETE_TASK:
+    // Finalização da tarefa com marcação de data
+  }
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Além disso, o projeto implementa:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✅ **Persistência de estado** via **localStorage** — garantindo que as tarefas e
+configurações sejam mantidas entre sessões.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+✅ **Temporização precisa** com contadores, pausas e retomadas.
+
+✅ **Reprodução de sons** — para notificar o usuário sobre início, pausa e fim
+de ciclos.
+
+✅ **Manipulação de datas** utilizando **date-fns** para formatar, calcular e
+exibir informações amigáveis.
+
+✅ **Web Workers** — para operações assíncronas e evitar bloqueio da interface.
+
+---
+
+## 📁 Estrutura de Pastas
+
 ```
+src/
+  ├── components/        # Componentes reutilizáveis
+  ├── contexts/
+  │    └── TaskContext/ # Implementação do contexto e reducer
+  ├── models/           # Modelos e tipagens
+  ├── utils/            # Funções utilitárias (ex: formatadores)
+  └── assets/           # Áudios, imagens e ícones
+```
+
+---
+
+## 🛠️ Funcionalidades
+
+- [x] Iniciar, pausar e resetar ciclos Pomodoro.
+- [x] Exibir o tempo restante com atualização em tempo real.
+- [x] Armazenar histórico de tarefas.
+- [x] Definir configurações personalizadas de duração.
+- [x] Notificações sonoras de finalização.
+- [x] Persistência de estado via localStorage.
+- [x] Timer desacoplado com possibilidade de uso de **Web Workers**.
+
+---
+
+## 📝 Como executar o projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seuusuario/chronos.git
+cd chronos
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie o ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+4. Para criar uma build de produção:
+
+```bash
+npm run build
+```
+
+5. Para visualizar a build:
+
+```bash
+npm run preview
+```
+
+---
+
+## ✅ Lições aprendidas
+
+- Utilização avançada de **Context API** e **Reducers**.
+- Criação de **Timers** e gerenciamento de ciclos de forma eficiente.
+- Persistência de dados com **localStorage**.
+- Manipulação de **áudio** para UX.
+- Organização de estado complexo em aplicações React.
+- Otimização de processos com **Web Workers**.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## ✨ Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull
+requests.
