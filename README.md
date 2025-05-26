@@ -74,8 +74,7 @@ configurações sejam mantidas entre sessões.
 
 ✅ **Temporização precisa** com contadores, pausas e retomadas.
 
-✅ **Reprodução de sons** — para notificar o usuário sobre início, pausa e fim
-de ciclos.
+✅ **Reprodução de sons** — para notificar o usuário sobre fim de ciclos.
 
 ✅ **Manipulação de datas** utilizando **date-fns** para formatar, calcular e
 exibir informações amigáveis.
@@ -90,9 +89,9 @@ exibir informações amigáveis.
 - [x] Exibir o tempo restante com atualização em tempo real.
 - [x] Armazenar histórico de tarefas.
 - [x] Definir configurações personalizadas de duração.
-- [x] Notificações sonoras de finalização.
+- [x] Notificações sonoras de finalização de ciclo.
 - [x] Persistência de estado via localStorage.
-- [x] Timer desacoplado com possibilidade de uso de **Web Workers**.
+- [x] Timer desacoplado com uso de **Web Workers**.
 
 ---
 
